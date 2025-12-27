@@ -629,4 +629,107 @@ footer {
         height: 35px;
         font-size: 0.9em;
     }
+
+}
+
+/* Add these styles to your existing style.css */
+
+/* Auth Modal Styles */
+.auth-tab {
+    padding: 10px 30px;
+    border: 2px solid #0891b2;
+    background: white;
+    color: #0891b2;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.auth-tab.active {
+    background: #0891b2;
+    color: white;
+}
+
+.auth-tab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.2);
+}
+
+/* Loading button state */
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #666;
+}
+
+/* User menu (if you want to add one) */
+.user-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.user-greeting {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-greeting .user-name {
+    font-weight: 600;
+    color: #0891b2;
+}
+
+.logout-btn {
+    padding: 6px 15px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+/* Success/Error messages */
+.alert-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+    background: #10b981;
+    color: white;
+}
+
+.alert-error {
+    background: #ef4444;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
